@@ -62,6 +62,7 @@ export default class EventbritePopupCheckout extends React.Component {
         widgetType: 'checkout',
         eventId: this.props.ebEventId,
         modal: this.props.isModal,
+        promoCode: this.props.promoCode,
         modalTriggerElementId: this.buttonId,
         onOrderComplete: this.props.onOrderComplete
       });
@@ -97,6 +98,7 @@ export default class EventbritePopupCheckout extends React.Component {
 
   static propTypes = {
     className: PropTypes.string,
+    promoCode: PropTypes.string,
     ebEventId: PropTypes.string.isRequired,
     ebScriptPath: PropTypes.string,
     isModal: PropTypes.bool,
@@ -110,6 +112,7 @@ export default class EventbritePopupCheckout extends React.Component {
     className: '',
     ebScriptPath: 'https://www.eventbrite.ca/static/widgets/eb_widgets.js',
     isModal: true,
+    promoCode: '',
     onOrderComplete: () => {},
     component: 'button',
     componentProps: {},
